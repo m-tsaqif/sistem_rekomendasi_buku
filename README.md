@@ -344,23 +344,28 @@ Berdasarkan hasil evaluasi pada cell sebelumnya, didapatkan nilai rata-rata Prec
 - Evaluasi dilakukan pada pengguna dengan minimal 15 rating, sehingga hasil ini paling representatif untuk pengguna aktif.
 - Nilai precision yang tinggi menunjukkan sistem sudah cukup baik, namun tetap perlu dipantau untuk menghindari bias terhadap buku populer atau genre tertentu.
 
-### Hasil Evaluasi Collaborative Filtering
+###  Hasil Evaluasi Collaborative Filtering
 
-Berdasarkan hasil evaluasi pada cell sebelumnya, diperoleh nilai rata-rata **Precision@10 sebesar 0.86** (atau 86%). Artinya, dari setiap 10 buku teratas yang direkomendasikan oleh sistem collaborative filtering (SVD), sekitar 8–9 buku benar-benar relevan atau sesuai dengan preferensi pengguna (memiliki rating aktual ≥ 6).
+Berdasarkan hasil evaluasi pada cell sebelumnya, diperoleh nilai rata-rata **Precision@10 sebesar 0.86** (86%), **Recall@10 sebesar 0.96** (96%), dan **F1-score@10 sebesar 0.71** (71%).  
+Artinya, dari setiap 10 buku teratas yang direkomendasikan oleh sistem collaborative filtering (SVD), sekitar 8–9 buku benar-benar relevan (memiliki rating aktual ≥ 6), dan sistem mampu mencakup hampir seluruh buku relevan yang tersedia untuk pengguna aktif.
 
 **Makna Praktis:**
-- **Tingkat relevansi rekomendasi sangat tinggi:** Sistem mampu memberikan rekomendasi yang mayoritasnya memang disukai pengguna.
-- **Potensi meningkatkan kepuasan pengguna:** Dengan precision tinggi, pengguna cenderung menemukan buku yang sesuai minat mereka di antara rekomendasi.
-- **Efektivitas model:** Collaborative filtering berbasis SVD terbukti efektif pada data ini, terutama untuk pengguna yang memiliki cukup banyak riwayat rating.
+- **Tingkat relevansi rekomendasi sangat tinggi:** Mayoritas rekomendasi memang disukai pengguna (precision tinggi).
+- **Cakupan rekomendasi sangat baik:** Hampir semua buku relevan berhasil direkomendasikan (recall sangat tinggi).
+- **Efektivitas model:** Nilai F1-score yang tinggi menunjukkan keseimbangan antara relevansi dan cakupan, sehingga sistem efektif untuk pengguna dengan riwayat rating yang cukup.
 
 **Catatan:**
-- Precision@10 hanya mengukur proporsi rekomendasi yang relevan, bukan cakupan semua buku relevan (recall).
+- Precision@10 mengukur proporsi rekomendasi yang relevan, sedangkan recall@10 mengukur cakupan semua buku relevan yang berhasil direkomendasikan.
 - Evaluasi dilakukan pada pengguna dengan minimal 15 rating, sehingga hasil ini paling representatif untuk pengguna aktif.
-- Nilai precision yang tinggi menunjukkan sistem sudah cukup baik, namun tetap perlu dipantau untuk menghindari bias terhadap buku populer atau genre tertentu.
+- Nilai metrik yang tinggi menunjukkan sistem sudah sangat baik, namun tetap perlu dipantau untuk menghindari bias terhadap buku populer atau genre tertentu.
 
 #### Kesimpulan Evaluasi
 
-Evaluasi menunjukkan bahwa **collaborative filtering (SVD-based)** menghasilkan Precision@10 sebesar **0.86** (86%), menandakan rekomendasi sangat relevan untuk pengguna aktif. **Content-based filtering** efektif untuk kasus cold start dengan memanfaatkan kemiripan konten buku. Kombinasi kedua metode ini saling melengkapi: content-based untuk pengguna/buku baru, collaborative untuk personalisasi pengguna aktif. Evaluasi metrik lain seperti recall dan F1-score tetap penting untuk menilai keseimbangan relevansi dan cakupan rekomendasi.
+Evaluasi menunjukkan bahwa **collaborative filtering (SVD-based)** menghasilkan Precision@10 sebesar **0.86** (86%), Recall@10 sebesar **0.96** (96%), dan F1-score@10 sebesar **0.71** (71%). Artinya, sistem mampu memberikan rekomendasi yang sangat relevan sekaligus mencakup hampir seluruh buku yang relevan untuk pengguna aktif.
+
+Sementara itu, **content-based filtering** efektif digunakan untuk mengatasi cold start problem, yaitu ketika pengguna atau buku baru belum memiliki riwayat interaksi. Metode ini memanfaatkan kemiripan konten buku (judul, penulis, penerbit) untuk memberikan rekomendasi yang tetap relevan meskipun data rating terbatas.
+
+Kombinasi kedua metode ini saling melengkapi: content-based filtering untuk pengguna/buku baru, dan collaborative filtering untuk personalisasi rekomendasi bagi pengguna aktif. Evaluasi menggunakan metrik precision, recall, dan F1-score penting untuk memastikan sistem mampu menjaga keseimbangan antara relevansi dan cakupan rekomendasi, sehingga pengalaman pengguna tetap optimal di berbagai skenario.
 
 ---
 

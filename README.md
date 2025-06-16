@@ -330,19 +330,20 @@ Untuk user ID 276726, sistem menghasilkan 10 rekomendasi buku dengan prediksi ra
 
 ## Evaluation
 
-### Evaluasi Collaborative Filtering
+### Hasil Evaluasi Content-Based Filtering
 
-Berdasarkan hasil evaluasi pada cell sebelumnya, didapatkan nilai rata-rata Precision@10 sebesar **0.86** (atau 86%). Artinya, dari setiap 10 buku teratas yang direkomendasikan oleh sistem collaborative filtering (SVD), sekitar 8–9 buku benar-benar relevan atau sesuai dengan preferensi pengguna (memiliki rating aktual ≥ 6).
+Berdasarkan hasil evaluasi pada cell sebelumnya, diperoleh nilai **Precision@10 sebesar 0.70** (70%), **Recall@10 sebesar 1.00** (100%), dan **F1-score@10 sebesar 0.82** (82%).  
+Artinya, dari setiap 10 buku teratas yang direkomendasikan oleh sistem content-based filtering (berdasarkan kemiripan konten dengan "The Hobbit"), sekitar 7 buku benar-benar relevan, dan sistem mampu mencakup seluruh buku relevan yang tersedia berdasarkan kemiripan konten.
 
 **Makna Praktis:**
-- **Tingkat relevansi rekomendasi sangat tinggi**: Sistem mampu memberikan rekomendasi yang mayoritasnya memang disukai pengguna.
-- **Potensi meningkatkan kepuasan pengguna**: Dengan precision tinggi, pengguna cenderung menemukan buku yang sesuai minat mereka di antara rekomendasi.
-- **Efektivitas model**: Collaborative filtering berbasis SVD terbukti efektif pada data ini, terutama untuk pengguna yang memiliki cukup banyak riwayat rating.
+- **Tingkat relevansi rekomendasi sangat baik:** Sebagian besar rekomendasi memang relevan dengan buku acuan (precision tinggi).
+- **Cakupan rekomendasi sempurna:** Semua buku relevan berhasil direkomendasikan (recall sangat tinggi).
+- **Efektivitas model:** Nilai F1-score yang tinggi menunjukkan keseimbangan antara relevansi dan cakupan, sehingga sistem efektif terutama untuk kasus cold start (pengguna/buku baru).
 
 **Catatan:**
-- Precision@10 hanya mengukur proporsi rekomendasi yang relevan, bukan cakupan semua buku relevan (recall).
-- Evaluasi dilakukan pada pengguna dengan minimal 15 rating, sehingga hasil ini paling representatif untuk pengguna aktif.
-- Nilai precision yang tinggi menunjukkan sistem sudah cukup baik, namun tetap perlu dipantau untuk menghindari bias terhadap buku populer atau genre tertentu.
+- Precision@10 mengukur proporsi rekomendasi yang relevan, sedangkan recall@10 mengukur cakupan semua buku relevan yang berhasil direkomendasikan.
+- Evaluasi dilakukan pada satu judul populer ("The Hobbit") sebagai studi kasus.
+- Nilai recall yang sempurna menandakan sistem sangat baik dalam menemukan semua buku mirip, namun precision masih dapat ditingkatkan agar rekomendasi makin spesifik dan relevan.
 
 ###  Hasil Evaluasi Collaborative Filtering
 

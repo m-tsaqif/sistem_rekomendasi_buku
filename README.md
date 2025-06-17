@@ -313,18 +313,18 @@ get_collab_recommendations(276726)
 
 Untuk user ID 276726, sistem menghasilkan 10 rekomendasi buku dengan prediksi rating tertinggi.
 
-| Book-Title                                                | Book-Author     | Publisher                 | Estimate_Score |
-|-----------------------------------------------------------|------------------|---------------------------|----------------|
-| My Sister's Keeper : A Novel (Picoult, Jodi)              | Jodi Picoult     | Atria                     | 8.989910       |
-| 52 Deck Series: 52 Ways to Celebrate Friendship           | Lynn Gordon      | Chronicle Books           | 8.846210       |
-| Dune (Remembering Tomorrow)                               | Frank Herbert    | ACE Charter               | 8.843266       |
-| The Return of the King (The Lord of the Rings,...)        | J.R.R. TOLKIEN   | Del Rey                   | 8.835297       |
-| Harry Potter and the Goblet of Fire (Book 4)              | J. K. Rowling    | Scholastic                | 8.769525       |
-| Weirdos From Another Planet!                              | Bill Watterson   | Andrews McMeel Publishing | 8.768037       |
-| Harry Potter and the Sorcerer's Stone (Book 1)            | J. K. Rowling    | Scholastic                | 8.762853       |
-| The Two Towers (The Lord of the Rings, Part 2)            | J. R. R. Tolkien | Houghton Mifflin Company  | 8.754392       |
-| Harry Potter and the Prisoner of Azkaban (Book 3)         | J. K. Rowling    | Scholastic                | 8.731077       |
-| Harry Potter and the Sorcerer's Stone (Harry P...)        | J. K. Rowling    | Arthur A. Levine Books    | 8.691173       |
+| No | Book Title                                                      | Book Author      | Publisher               | Estimate Score |
+|----|-----------------------------------------------------------------|------------------|-------------------------|----------------|
+| 0  | The Return of the King (The Lord of the Rings,...)              | J.R.R. TOLKIEN   | Del Rey                 | 8.9670191      |
+| 1  | Harry Potter and the Sorcerer's Stone (Book 1)                  | J. K. Rowling    | Scholastic              | 8.8708492      |
+| 2  | 52 Deck Series: 52 Ways to Celebrate Friendship                 | Lynn Gordon      | Chronicle Books         | 8.867273       |
+| 3  | My Sister's Keeper : A Novel (Picoult, Jodi)                    | Jodi Picoult     | Atria                   | 8.862381       |
+| 4  | Harry Potter and the Prisoner of Azkaban (Book 3)               | J. K. Rowling    | Scholastic              | 8.8116605      |
+| 5  | The Lord of the Rings (Movie Art Cover)                         | J.R.R. Tolkien   | Houghton Mifflin Company| 8.7957096      |
+| 6  | The Princess Bride: S Morgenstern's Classic Tale...             | WILLIAM GOLDMAN  | Del Rey                 | 8.7821837      |
+| 7  | Watership Down                                                  | Richard Adams    | Avon                    | 8.7101938      |
+| 8  | Lonesome Dove                                                   | Larry McMurtry   | Pocket                  | 8.7004699      |
+| 9  | Dilbert: A Book of Postcards                                    | Scott Adams      | Andrews McMeel Pub      | 8.696727       |
 
 ---
 
